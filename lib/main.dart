@@ -1,4 +1,4 @@
-import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:easy_splash_screen/easy_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:yugacrew/home/tabs/root_tab.dart';
 
@@ -18,12 +18,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AnimatedSplashScreen(
-        duration: 3000,
-        splash: 'assets/splash.png',
-        splashIconSize: double.maxFinite,
-        centered: true,
-        nextScreen: RootTab(),
+      home: EasySplashScreen(
+        logo: Image.asset('assets/no_image.png'),
+        backgroundImage: Image.asset('assets/splash.png').image,
+        showLoader: true,
+        navigator: RootTab(),
+        durationInSeconds: 3,
       ),
     );
   }
