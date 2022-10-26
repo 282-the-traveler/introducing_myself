@@ -51,11 +51,16 @@ class IntroductionWidget extends StatelessWidget {
               fontSize: LARGE_FONT_SIZE,
             ),
           ),
-          const Text(
-            '90년생 · 플러터 개발자',
-            style: TextStyle(
-              fontSize: SMALL_FONT_SIZE,
-              color: GRAY,
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 2.0,
+            ),
+            child: const Text(
+              '90년생 · 플러터 개발자',
+              style: TextStyle(
+                fontSize: SMALL_FONT_SIZE,
+                color: GRAY,
+              ),
             ),
           ),
           TextButton(

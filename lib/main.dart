@@ -1,3 +1,4 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:yugacrew/home/tabs/root_tab.dart';
 
@@ -17,7 +18,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const RootTab(),
+      home: AnimatedSplashScreen(
+        duration: 3000,
+        splash: 'assets/splash.png',
+        splashIconSize: double.maxFinite,
+        centered: true,
+        nextScreen: RootTab(),
+      ),
     );
   }
 }
