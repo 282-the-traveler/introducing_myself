@@ -50,6 +50,7 @@ class _RootTabState extends State<RootTab> with SingleTickerProviderStateMixin {
     final String profile = 'assets/images/profile.svg';
     final String profile_red = 'assets/images/profile_red.svg';
 
+    // 바텀네비게이션바
     return DefaultLayout(
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: RED,
@@ -101,6 +102,7 @@ class _RootTabState extends State<RootTab> with SingleTickerProviderStateMixin {
           )
         ],
       ),
+      // 탭바뷰
       child: TabBarView(
         physics: const NeverScrollableScrollPhysics(),
         controller: controller,
@@ -114,8 +116,6 @@ class _RootTabState extends State<RootTab> with SingleTickerProviderStateMixin {
           ),
           CareerScreen(
             isBack: false,
-            careerTitle: CAREER_TITLE,
-            careerText: CAREER_TEXT,
           ),
         ],
       ),

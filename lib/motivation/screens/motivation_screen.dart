@@ -20,7 +20,10 @@ class MotivationScreen extends StatelessWidget {
       isBack: isBack,
       child: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 105, vertical: 80.7),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 14,
+            vertical: 80.7,
+          ),
           child: Column(
             children: [
               SvgPicture.asset(
@@ -39,14 +42,14 @@ class MotivationScreen extends StatelessWidget {
                   MOTIVATION_TITLE,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: XX_LARGE_FONT_SIZE,
+                    fontSize: X_LARGE_FONT_SIZE,
                   ),
                 ),
               ),
               const Text(
                 MOTIVATION_TEXT,
                 style: TextStyle(
-                  fontSize: LARGE_FONT_SIZE,
+                  fontSize: SMALL_FONT_SIZE,
                 ),
               )
             ],

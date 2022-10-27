@@ -33,6 +33,7 @@ class IntroductionWidget extends StatelessWidget {
               fontSize: LARGE_FONT_SIZE,
             ),
           ),
+          // 사진
           const Padding(
             padding: EdgeInsets.all(
               14.0,

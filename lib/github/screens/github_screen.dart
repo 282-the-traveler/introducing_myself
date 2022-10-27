@@ -12,6 +12,7 @@ class GithubScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // 깃허브 웹뷰
     return DefaultLayout(
       title: 'Github',
       isBack: isBack,

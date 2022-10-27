@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:yugacrew/common/const/colors.dart';
 import 'package:yugacrew/common/const/sizes.dart';
 import 'package:yugacrew/common/layout/default_layout.dart';
+import 'package:yugacrew/contact/widgets/contacts_widget.dart';
 import 'package:yugacrew/github/screens/github_screen.dart';
 import 'package:yugacrew/home/widgets/introduction_widget.dart';
 import 'package:yugacrew/home/widgets/my_data_widget.dart';
@@ -26,6 +27,8 @@ class _HomeScreenState extends State<HomeScreen> {
     final String chat = 'assets/images/chat.svg';
     final String bottle = 'assets/images/bottle.svg';
     final String down = 'assets/images/down.svg';
+    final String edit = 'assets/images/edit.svg';
+
     final List<String> dropdownItems = [
       '노션',
       '블로그',
@@ -35,12 +38,14 @@ class _HomeScreenState extends State<HomeScreen> {
     return DefaultLayout(
       title: logo,
       elevation: 0,
+      isFloatingActionButton: true,
       child: SingleChildScrollView(
         child: Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                // 이력서 버튼
                 Container(
                   margin: const EdgeInsets.symmetric(
                     horizontal: 14.0,
@@ -110,25 +115,29 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ],
             ),
+            // 자기소개 위젯
             const IntroductionWidget(),
+            // 깃허브 위젯
             MyDataWidget(
               movingScreen: const GithubScreen(
                 isBack: true,
               ),
               firstImage: '',
               firstText: '개발 실력이 더 궁금하다면?',
-              lastText: '깃허브에서 커밋로그를 보실 수 있어요!',
+              middleText: '깃허브',
+              lastText: '에서 커밋로그를 보실 수 있어요!',
               lastImage: right,
             ),
+            // 연락처 위젯
             MyDataWidget(
-              movingScreen: const MotivationScreen(
-                isBack: true,
-              ),
+              movingScreen: const ContactsWidget(),
               firstImage: chat,
               firstText: '연락처 보기',
               lastText: '합격 결과는 여기로 통보해 주세요',
               lastImage: right,
+              isFirstRich: true,
             ),
+            // 지원동기 위젯
             MyDataWidget(
               movingScreen: const MotivationScreen(
                 isBack: true,
@@ -136,7 +145,8 @@ class _HomeScreenState extends State<HomeScreen> {
               firstImage: bottle,
               firstText: '육아크루 지원동기',
               lastText: '합류한다면 이런 일을 하고 싶습니다',
-              lastImage: right,
+              lastImage: edit,
+              isEdit: true,
             ),
             const Padding(
               padding: EdgeInsets.only(
@@ -166,6 +176,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+            // 나를 소개하는 키워드 위젯
             Container(
               margin: const EdgeInsets.only(
                 top: 20,
@@ -173,14 +184,15 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               height: 178,
               child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 3,
-                  itemBuilder: (BuildContext context, int index) {
-                    return StrengthWidget(
-                      index: index,
-                    );
-                  }),
-            )
+                scrollDirection: Axis.horizontal,
+                itemCount: 3,
+                itemBuilder: (BuildContext context, int index) {
+                  return StrengthWidget(
+                    index: index,
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ),

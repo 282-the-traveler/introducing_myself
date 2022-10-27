@@ -1,5 +1,6 @@
 import 'package:easy_splash_screen/easy_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:yugacrew/common/const/colors.dart';
 import 'package:yugacrew/home/tabs/root_tab.dart';
 
 void main() {
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         showLoader: true,
         navigator: RootTab(),
         durationInSeconds: 3,
+        loaderColor: RED,
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:yugacrew/common/const/colors.dart';
 
 class DefaultLayout extends StatelessWidget {
   final Widget child;
@@ -9,6 +10,7 @@ class DefaultLayout extends StatelessWidget {
   final bool isBack;
   final double elevation;
   final bool isClose;
+  final bool isFloatingActionButton;
 
   const DefaultLayout({
     Key? key,
@@ -19,26 +21,36 @@ class DefaultLayout extends StatelessWidget {
     this.isBack = false,
     this.elevation = 0.5,
     this.isClose = false,
+    this.isFloatingActionButton = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final String pencil = 'assets/images/pencil.svg';
     return Scaffold(
       backgroundColor: backgroundColor ?? Colors.white,
       appBar: renderAppBar(),
       body: child,
       bottomNavigationBar: bottomNavigationBar,
+      floatingActionButton: isFloatingActionButton
+          ? FloatingActionButton(
+              onPressed: () {},
+              child: SvgPicture.asset(
+                pencil,
+              ),
+              backgroundColor: RED,
+            )
+          : SizedBox.shrink(),
     );
   }
 
+  // 앱 바
   AppBar? renderAppBar() {
     if (title == null) {
       return null;
     } else {
       return AppBar(
-        leading: isBack
-            ? BackButton()
-            : const SizedBox.shrink(),
+        leading: isBack ? BackButton() : const SizedBox.shrink(),
         backgroundColor: Colors.white,
         elevation: elevation,
         title: title!.startsWith('assets')
@@ -50,11 +62,7 @@ class DefaultLayout extends StatelessWidget {
               ),
         centerTitle: true,
         foregroundColor: Colors.black,
-        actions: [
-          isClose
-              ? const CloseButton()
-              : const SizedBox.shrink()
-        ],
+        actions: [isClose ? const CloseButton() : const SizedBox.shrink()],
       );
     }
   }

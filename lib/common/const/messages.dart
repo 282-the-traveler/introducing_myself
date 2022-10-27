@@ -12,6 +12,11 @@ const String STRENGTH_TEXT1 =
     '협업을 하면서 꼼꼼함의 차이가 서비스의 완성도를 결정한다는 걸 느꼈습니다. 개발하는 데 가장 중요한 점 중 하나라고 생각하는 꼼꼼한 성격을 가졌습니다.';
 const String STRENGTH_TEXT2 = '필요한 정보를 종합하여 적합한 코드로 구현시키는 응용력이 좋습니다.';
 const String STRENGTH_TEXT3 = '해보지 않았던 일에 대한 두려움이 적으며 새로운 도전을 즐깁니다.';
-const String CAREER_TITLE = 'LogCenter';
-const String CAREER_TEXT =
+const String CAREER_TITLE1 = 'LogCenter';
+const String CAREER_TEXT1 =
     '\- Java\, Spring framework에 PostgreSQL을 사용한 통합로그관리 서비스\n \- Docker\, Nginx를 이용한 인프라 구축 및 Micro Service Architecture 운영\n\- 클라우드 버전에서 AWS 상의 EC2\, Route53\, S3 등 관리\n\- Bitbucket을 이용한 개발\/ 테스트 이슈 관리\n\- 해외지사개발자\, 테스터와원격협업진행';
+const String CAREER_TITLE2 = 'InnerBeans';
+const String CAREER_TEXT2 =
+    '\- 기업을 대상으로 한 협업 메신저 InnerBeans의 Android 버전 개발\n\- REST API\/ 웹소켓\/ GCM\/ RealmDB 이용\n\- 현재는 Flutter 버전으로 리뉴얼';
+const String CONTACTS = '이메일: 282.the.traveler@gmail.com\n연락처: ';
+const String PHONE_NUMBER = '010-5600-1083';
