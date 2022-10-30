@@ -19,8 +19,10 @@ class ContactsWidget extends StatelessWidget {
           children: [
             Spacer(),
             const Text(
-              CONTACTS+PHONE_NUMBER,
-              style: TextStyle(fontSize: LARGE_FONT_SIZE,),
+              CONTACTS + PHONE_NUMBER,
+              style: TextStyle(
+                fontSize: LARGE_FONT_SIZE,
+              ),
               textAlign: TextAlign.center,
             ),
             Spacer(),
@@ -29,19 +31,19 @@ class ContactsWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Expanded(
-                  child: Container(
-                    alignment: Alignment.center,
-                    height: 50,
-                    decoration: const BoxDecoration(
-                      color: LIGHT_GRAY,
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(
-                          5.0,
+                  child: GestureDetector(
+                    onTap: () => Navigator.of(context).pop(),
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 50,
+                      decoration: const BoxDecoration(
+                        color: LIGHT_GRAY,
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(
+                            5.0,
+                          ),
                         ),
                       ),
-                    ),
-                    child: TextButton(
-                      onPressed: () => Navigator.of(context).pop(),
                       child: const Text(
                         '닫기',
                         style: TextStyle(
@@ -52,21 +54,21 @@ class ContactsWidget extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  child: Container(
-                    alignment: Alignment.center,
-                    height: 50,
-                    decoration: const BoxDecoration(
-                      color: GREEN,
-                      borderRadius: BorderRadius.only(
-                        bottomRight: Radius.circular(
-                          5.0,
+                  child: GestureDetector(
+                    onTap: () async {
+                      FlutterPhoneDirectCaller.callNumber(PHONE_NUMBER);
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      height: 50,
+                      decoration: const BoxDecoration(
+                        color: GREEN,
+                        borderRadius: BorderRadius.only(
+                          bottomRight: Radius.circular(
+                            5.0,
+                          ),
                         ),
                       ),
-                    ),
-                    child: TextButton(
-                      onPressed: () async {
-                        FlutterPhoneDirectCaller.callNumber(PHONE_NUMBER);
-                      },
                       child: const Text(
                         '연락하기',
                         style: TextStyle(
