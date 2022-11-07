@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:yugacrew/career/screens/career_screen.dart';
 import 'package:yugacrew/common/const/colors.dart';
-import 'package:yugacrew/common/const/messages.dart';
+import 'package:yugacrew/common/const/images.dart';
 import 'package:yugacrew/common/layout/default_layout.dart';
 import 'package:yugacrew/github/screens/github_screen.dart';
 import 'package:yugacrew/home/screens/home_screen.dart';
@@ -41,14 +41,6 @@ class _RootTabState extends State<RootTab> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    final String home = 'assets/images/home.svg';
-    final String home_red = 'assets/images/home_red.svg';
-    final String github = 'assets/images/github.svg';
-    final String github_red = 'assets/images/github_red.svg';
-    final String motivation = 'assets/images/motivation.svg';
-    final String motivation_red = 'assets/images/motivation_red.svg';
-    final String profile = 'assets/images/profile.svg';
-    final String profile_red = 'assets/images/profile_red.svg';
 
     // 바텀네비게이션바
     return DefaultLayout(

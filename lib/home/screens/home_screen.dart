@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:yugacrew/common/const/colors.dart';
 import 'package:yugacrew/common/const/sizes.dart';
+import 'package:yugacrew/common/const/images.dart';
 import 'package:yugacrew/common/layout/default_layout.dart';
 import 'package:yugacrew/contact/widgets/contacts_widget.dart';
 import 'package:yugacrew/github/screens/github_screen.dart';
@@ -21,13 +22,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    final String logo = 'assets/images/logo.svg';
-    final String bell = 'assets/images/bell_light.svg';
-    final String right = 'assets/images/expand_circle_right.svg';
-    final String chat = 'assets/images/chat.svg';
-    final String bottle = 'assets/images/bottle.svg';
-    final String down = 'assets/images/down.svg';
-    final String edit = 'assets/images/edit.svg';
 
     final List<String> dropdownItems = [
       '노션',
@@ -76,7 +70,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               value: item,
                               child: Text(
                                 item,
-                                style: const TextStyle(),
+                                style: const TextStyle(
+                                ),
                               ),
                             ),
                           )
@@ -118,8 +113,8 @@ class _HomeScreenState extends State<HomeScreen> {
             // 자기소개 위젯
             const IntroductionWidget(),
             // 깃허브 위젯
-            MyDataWidget(
-              movingScreen: const GithubScreen(
+            const MyDataWidget(
+              movingScreen: GithubScreen(
                 isBack: true,
               ),
               firstImage: '',
@@ -129,8 +124,8 @@ class _HomeScreenState extends State<HomeScreen> {
               lastImage: right,
             ),
             // 연락처 위젯
-            MyDataWidget(
-              movingScreen: const ContactsWidget(),
+            const MyDataWidget(
+              movingScreen: ContactsWidget(),
               firstImage: chat,
               firstText: '연락처 보기',
               lastText: '합격 결과는 여기로 통보해 주세요',
@@ -138,8 +133,8 @@ class _HomeScreenState extends State<HomeScreen> {
               isFirstRich: true,
             ),
             // 지원동기 위젯
-            MyDataWidget(
-              movingScreen: const MotivationScreen(
+            const MyDataWidget(
+              movingScreen: MotivationScreen(
                 isBack: true,
               ),
               firstImage: bottle,

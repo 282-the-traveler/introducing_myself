@@ -47,7 +47,10 @@ class MyDataWidget extends StatelessWidget {
         ),
         height: 68,
         decoration: BoxDecoration(
-          border: Border.all(color: Colors.black12, width: 2),
+          border: Border.all(
+            color: Colors.black12,
+            width: 2,
+          ),
           borderRadius: BorderRadius.circular(
             RARIUS,
           ),
@@ -92,26 +95,26 @@ class MyDataWidget extends StatelessWidget {
                         ),
                       )
                     : Row(
-                  children: [
-                    Text(
-                      middleText,
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: MEDIUM_FONT_SIZE,
-                        color: GREEN,
-                        decoration: TextDecoration.underline,
-                        decorationColor: UNDERLINE_GREEN,
-                        decorationThickness: 10,
-                      ),
-                    ),
-                    Text(
-                      lastText,
-                      style: const TextStyle(
-                        fontSize: MEDIUM_FONT_SIZE,
-                      ),
-                    )
-                  ],
-                )
+                        children: [
+                          Text(
+                            middleText,
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: MEDIUM_FONT_SIZE,
+                              color: GREEN,
+                              decoration: TextDecoration.underline,
+                              decorationColor: UNDERLINE_GREEN,
+                              decorationThickness: 10,
+                            ),
+                          ),
+                          Text(
+                            lastText,
+                            style: const TextStyle(
+                              fontSize: MEDIUM_FONT_SIZE,
+                            ),
+                          )
+                        ],
+                      )
               ],
             ),
             isEdit

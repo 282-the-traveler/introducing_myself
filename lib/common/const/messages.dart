@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 
 const String INTRODUCTION_TEXT =
     '안드로이드 개발과 DevOps engineer 업무를 맡아 진행했습니다. \n해보지 않았던 일에 대한 두려움이 적으며 새로운 도전을 즐깁니다. \n2019년부터 재택 근무 중으로 원격 업무에 대해 잘 이해하고 있습니다. \n현재는 다시 개발자의 길을 걷기 위해 Flutter 사이드 프로젝트를 진행하며 실력을 키워 나가고 있습니다.\n\n테\n스\n트\n용\n단\n어\n추\n가\n\n테\n스\n트\n용\n단\n어\n추\n가';

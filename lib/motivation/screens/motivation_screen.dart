@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:yugacrew/common/const/messages.dart';
 import 'package:yugacrew/common/const/sizes.dart';
+import 'package:yugacrew/common/const/images.dart';
 import 'package:yugacrew/common/layout/default_layout.dart';
 
 class MotivationScreen extends StatelessWidget {
@@ -14,7 +15,6 @@ class MotivationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String big_motivation = 'assets/images/big_motivation.svg';
     return DefaultLayout(
       title: '지원동기',
       isBack: isBack,

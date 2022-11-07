@@ -11,13 +11,13 @@ class ContactsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       contentPadding: EdgeInsets.zero,
-      content: Container(
+      content: SizedBox(
         width: 302.0,
         height: 158.0,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Spacer(),
+            const Spacer(),
             const Text(
               CONTACTS + PHONE_NUMBER,
               style: TextStyle(
@@ -25,7 +25,7 @@ class ContactsWidget extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            Spacer(),
+            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.end,

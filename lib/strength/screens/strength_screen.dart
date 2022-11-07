@@ -14,7 +14,7 @@ class StrengthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double statusBarHeight = MediaQuery.of(context).padding.top;
-    // 키워드 제목, ㅐpa
+    // 키워드 제목, 내용
     return DefaultLayout(
       isClose: true,
       child: Column(
@@ -60,10 +60,11 @@ class StrengthScreen extends StatelessWidget {
               vertical: 2.0,
             ),
             decoration: BoxDecoration(
-                border: Border.all(
-              width: 1,
-              color: VIOLET,
-            )),
+              border: Border.all(
+                width: 1,
+                color: VIOLET,
+              ),
+            ),
             child: const Text(
               '키워드',
               style: TextStyle(

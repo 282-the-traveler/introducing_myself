@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:yugacrew/common/const/colors.dart';
 import 'package:yugacrew/common/const/messages.dart';
 import 'package:yugacrew/common/const/sizes.dart';
+import 'package:yugacrew/common/const/images.dart';
 import 'package:yugacrew/strength/screens/strength_screen.dart';
 
 class StrengthWidget extends StatelessWidget {
@@ -15,7 +16,6 @@ class StrengthWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String down = 'assets/images/expand_circle_down.svg';
     // 키워드 제목 리스트
     final List<String> strengthTitleList = [
       STRENGTH_TITLE1,
@@ -119,7 +119,7 @@ class StrengthWidget extends StatelessWidget {
                     );
                   },
                   icon: SvgPicture.asset(
-                    down,
+                    circle_down,
                     height: 29,
                   ),
                 ),

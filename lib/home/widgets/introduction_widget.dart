@@ -52,11 +52,11 @@ class IntroductionWidget extends StatelessWidget {
               fontSize: LARGE_FONT_SIZE,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(
+          const Padding(
+            padding: EdgeInsets.only(
               top: 2.0,
             ),
-            child: const Text(
+            child: Text(
               '90년생 · 플러터 개발자',
               style: TextStyle(
                 fontSize: SMALL_FONT_SIZE,

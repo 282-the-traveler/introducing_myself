@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         logo: Image.asset('assets/no_image.png'),
         backgroundImage: Image.asset('assets/splash.png').image,
         showLoader: true,
-        navigator: RootTab(),
+        navigator: const RootTab(),
         durationInSeconds: 3,
         loaderColor: RED,
       ),
