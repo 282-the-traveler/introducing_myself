@@ -1,6 +1,7 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:yugacrew/common/const/colors.dart';
 import 'package:yugacrew/common/const/sizes.dart';
 import 'package:yugacrew/common/const/images.dart';
@@ -22,7 +23,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-
     final List<String> dropdownItems = [
       '노션',
       '블로그',
@@ -70,8 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               value: item,
                               child: Text(
                                 item,
-                                style: const TextStyle(
-                                ),
+                                style: const TextStyle(),
                               ),
                             ),
                           )
@@ -102,7 +101,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () async {
+                    final url = Uri.parse(
+                        'https://www.yugacrew.com/team');
+                    launchUrl(url, mode: LaunchMode.externalApplication);
+                  },
                   icon: SvgPicture.asset(
                     bell,
                     height: 28,
