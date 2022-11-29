@@ -17,20 +17,20 @@ class IntroductionWidget extends StatelessWidget {
         vertical: 20,
       ),
       width: MediaQuery.of(context).size.width,
-      color: YELLOW,
+      color: AppColors.YELLOW,
       child: Column(
         children: [
           const Text(
             '저를 소개합니다 :)',
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: XX_LARGE_FONT_SIZE,
+              fontSize: Sizes.XX_LARGE_FONT_SIZE,
             ),
           ),
           const Text(
-            '육아크루의 개발팀! 나를 발견하다니 행운이다',
+            '개발팀! 나를 발견하다니 행운이다',
             style: TextStyle(
-              fontSize: LARGE_FONT_SIZE,
+              fontSize: Sizes.LARGE_FONT_SIZE,
             ),
           ),
           // 사진
@@ -49,7 +49,7 @@ class IntroductionWidget extends StatelessWidget {
             '박재경',
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: LARGE_FONT_SIZE,
+              fontSize: Sizes.LARGE_FONT_SIZE,
             ),
           ),
           const Padding(
@@ -59,8 +59,8 @@ class IntroductionWidget extends StatelessWidget {
             child: Text(
               '90년생 · 플러터 개발자',
               style: TextStyle(
-                fontSize: SMALL_FONT_SIZE,
-                color: GRAY,
+                fontSize: Sizes.SMALL_FONT_SIZE,
+                color: AppColors.GRAY,
               ),
             ),
           ),
@@ -79,9 +79,9 @@ class IntroductionWidget extends StatelessWidget {
                       ),
                       child: SingleChildScrollView(
                         child: Text(
-                          INTRODUCTION_TEXT,
+                          Messages.INTRODUCTION_TEXT,
                           style: TextStyle(
-                            fontSize: LARGE_FONT_SIZE,
+                            fontSize: Sizes.LARGE_FONT_SIZE,
                           ),
                         ),
                       ),
@@ -97,13 +97,13 @@ class IntroductionWidget extends StatelessWidget {
               width: 120,
               height: 36,
               alignment: Alignment.center,
-              color: BLACK,
+              color: AppColors.BLACK,
               child: const Text(
                 '소개글 읽기',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
-                  fontSize: SMALL_FONT_SIZE,
+                  fontSize: Sizes.SMALL_FONT_SIZE,
                 ),
               ),
             ),

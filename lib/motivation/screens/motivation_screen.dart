@@ -27,7 +27,7 @@ class MotivationScreen extends StatelessWidget {
           child: Column(
             children: [
               SvgPicture.asset(
-                big_motivation,
+                Images.big_motivation,
                 height: 120,
                 width: 150,
               ),
@@ -39,17 +39,17 @@ class MotivationScreen extends StatelessWidget {
                   bottom: 10,
                 ),
                 child: Text(
-                  MOTIVATION_TITLE,
+                  Messages.MOTIVATION_TITLE,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: X_LARGE_FONT_SIZE,
+                    fontSize: Sizes.X_LARGE_FONT_SIZE,
                   ),
                 ),
               ),
               const Text(
-                MOTIVATION_TEXT,
+                Messages.MOTIVATION_TEXT,
                 style: TextStyle(
-                  fontSize: SMALL_FONT_SIZE,
+                  fontSize: Sizes.SMALL_FONT_SIZE,
                 ),
               )
             ],

@@ -24,7 +24,7 @@ class StrengthScreen extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             children: [
               Container(
-                color: GREEN,
+                color: AppColors.GREEN,
                 height: 210,
                 margin: EdgeInsets.only(
                   top: statusBarHeight,
@@ -62,14 +62,14 @@ class StrengthScreen extends StatelessWidget {
             decoration: BoxDecoration(
               border: Border.all(
                 width: 1,
-                color: VIOLET,
+                color: AppColors.VIOLET,
               ),
             ),
             child: const Text(
               '키워드',
               style: TextStyle(
-                color: VIOLET,
-                fontSize: SMALL_FONT_SIZE,
+                color: AppColors.VIOLET,
+                fontSize: Sizes.SMALL_FONT_SIZE,
               ),
             ),
           ),
@@ -87,7 +87,7 @@ class StrengthScreen extends StatelessWidget {
               vertical: 16.0,
             ),
             child: const Divider(
-              color: BLACK,
+              color: AppColors.BLACK,
             ),
           ),
           Container(

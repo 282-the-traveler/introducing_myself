@@ -16,13 +16,13 @@ class CareerScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // 경력 제목 리스트
     final List<String> careerTitleList = [
-      CAREER_TITLE1,
-      CAREER_TITLE2,
+      Messages.CAREER_TITLE1,
+      Messages.CAREER_TITLE2,
     ];
     // 경력 내용 리스트
     final List<String> careerTextList = [
-      CAREER_TEXT1,
-      CAREER_TEXT2,
+      Messages.CAREER_TEXT1,
+      Messages.CAREER_TEXT2,
     ];
     return DefaultLayout(
       title: '경력기술서',
@@ -39,7 +39,7 @@ class CareerScreen extends StatelessWidget {
             ),
             const Divider(
               thickness: 1.0,
-              color: LIGHT_GRAY,
+              color: AppColors.LIGHT_GRAY,
             ),
             // 경력 내용
             Expanded(
@@ -56,7 +56,7 @@ class CareerScreen extends StatelessWidget {
                         careerTitleList[index],
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: X_LARGE_FONT_SIZE,
+                          fontSize: Sizes.X_LARGE_FONT_SIZE,
                         ),
                       ),
                       const SizedBox(
@@ -65,7 +65,7 @@ class CareerScreen extends StatelessWidget {
                       Text(
                         careerTextList[index],
                         style: const TextStyle(
-                          fontSize: MEDIUM_FONT_SIZE,
+                          fontSize: Sizes.MEDIUM_FONT_SIZE,
                         ),
                       )
                     ],

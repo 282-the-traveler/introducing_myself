@@ -18,15 +18,15 @@ class StrengthWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     // 키워드 제목 리스트
     final List<String> strengthTitleList = [
-      STRENGTH_TITLE1,
-      STRENGTH_TITLE2,
-      STRENGTH_TITLE3,
+      Messages.STRENGTH_TITLE1,
+      Messages.STRENGTH_TITLE2,
+      Messages.STRENGTH_TITLE3,
     ];
     // 키워드 내용 리스트
     final List<String> strengthTextList = [
-      STRENGTH_TEXT1,
-      STRENGTH_TEXT2,
-      STRENGTH_TEXT3,
+      Messages.STRENGTH_TEXT1,
+      Messages.STRENGTH_TEXT2,
+      Messages.STRENGTH_TEXT3,
     ];
     String itemIndex = (index + 1).toString();
     return InkWell(
@@ -45,10 +45,10 @@ class StrengthWidget extends StatelessWidget {
           left: 14.0,
         ),
         decoration: BoxDecoration(
-          color: GREEN,
-          border: Border.all(color: GREEN, width: 2),
+          color: AppColors.GREEN,
+          border: Border.all(color: AppColors.GREEN, width: 2),
           borderRadius: BorderRadius.circular(
-            RARIUS,
+            Sizes.RARIUS,
           ),
         ),
         width: 150,
@@ -71,7 +71,7 @@ class StrengthWidget extends StatelessWidget {
                   style: const TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
-                    fontSize: X_SMALL_FONT_SIZE,
+                    fontSize: Sizes.X_SMALL_FONT_SIZE,
                   ),
                 ),
               ),
@@ -84,7 +84,7 @@ class StrengthWidget extends StatelessWidget {
                   strengthTitleList[index],
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: LARGE_FONT_SIZE,
+                    fontSize: Sizes.LARGE_FONT_SIZE,
                   ),
                 ),
               ),
@@ -98,7 +98,7 @@ class StrengthWidget extends StatelessWidget {
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
-                  fontSize: SMALL_FONT_SIZE,
+                  fontSize: Sizes.SMALL_FONT_SIZE,
                 ),
               ),
               Align(
@@ -119,7 +119,7 @@ class StrengthWidget extends StatelessWidget {
                     );
                   },
                   icon: SvgPicture.asset(
-                    circle_down,
+                    Images.circle_down,
                     height: 29,
                   ),
                 ),

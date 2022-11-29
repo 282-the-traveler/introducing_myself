@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
     String? selectedValue;
 
     return DefaultLayout(
-      title: logo,
+      title: Images.logo,
       elevation: 0,
       isFloatingActionButton: true,
       child: SingleChildScrollView(
@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         50,
                       ),
                       border: Border.all(
-                        color: LIGHT_GRAY,
+                        color: AppColors.LIGHT_GRAY,
                         width: 1,
                       )),
                   padding: const EdgeInsets.only(
@@ -85,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           4.0,
                         ),
                         border: Border.all(
-                          color: LIGHT_GRAY,
+                          color: AppColors.LIGHT_GRAY,
                         ),
                       ),
                       dropdownElevation: 3,
@@ -95,7 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         });
                       },
                       icon: SvgPicture.asset(
-                        down,
+                        Images.down,
                       ),
                     ),
                   ),
@@ -107,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     launchUrl(url, mode: LaunchMode.externalApplication);
                   },
                   icon: SvgPicture.asset(
-                    bell,
+                    Images.bell,
                     height: 28,
                   ),
                 ),
@@ -124,15 +124,15 @@ class _HomeScreenState extends State<HomeScreen> {
               firstText: '개발 실력이 더 궁금하다면?',
               middleText: '깃허브',
               lastText: '에서 커밋로그를 보실 수 있어요!',
-              lastImage: right,
+              lastImage: Images.right,
             ),
             // 연락처 위젯
             const MyDataWidget(
               movingScreen: ContactsWidget(),
-              firstImage: chat,
+              firstImage: Images.chat,
               firstText: '연락처 보기',
               lastText: '합격 결과는 여기로 통보해 주세요',
-              lastImage: right,
+              lastImage: Images.right,
               isFirstRich: true,
             ),
             // 지원동기 위젯
@@ -140,10 +140,10 @@ class _HomeScreenState extends State<HomeScreen> {
               movingScreen: MotivationScreen(
                 isBack: true,
               ),
-              firstImage: bottle,
-              firstText: '육아크루 지원동기',
+              firstImage: Images.bottle,
+              firstText: '지원동기',
               lastText: '합류한다면 이런 일을 하고 싶습니다',
-              lastImage: edit,
+              lastImage: Images.edit,
               isEdit: true,
             ),
             const Padding(
@@ -158,7 +158,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   'My Keywords',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: XX_LARGE_FONT_SIZE,
+                    fontSize: Sizes.XX_LARGE_FONT_SIZE,
                   ),
                 ),
               ),

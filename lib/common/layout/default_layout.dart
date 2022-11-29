@@ -35,9 +35,9 @@ class DefaultLayout extends StatelessWidget {
       floatingActionButton: isFloatingActionButton
           ? FloatingActionButton(
               onPressed: () {},
-              backgroundColor: RED,
+              backgroundColor: AppColors.RED,
               child: SvgPicture.asset(
-                pencil,
+                Images.pencil,
               ),
             )
           : const SizedBox.shrink(),

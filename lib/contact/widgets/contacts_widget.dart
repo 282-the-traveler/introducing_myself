@@ -19,9 +19,9 @@ class ContactsWidget extends StatelessWidget {
           children: [
             const Spacer(),
             const Text(
-              CONTACTS + PHONE_NUMBER,
+              Messages.CONTACTS + Messages.PHONE_NUMBER,
               style: TextStyle(
-                fontSize: LARGE_FONT_SIZE,
+                fontSize: Sizes.LARGE_FONT_SIZE,
               ),
               textAlign: TextAlign.center,
             ),
@@ -37,7 +37,7 @@ class ContactsWidget extends StatelessWidget {
                       alignment: Alignment.center,
                       height: 50,
                       decoration: const BoxDecoration(
-                        color: LIGHT_GRAY,
+                        color: AppColors.LIGHT_GRAY,
                         borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(
                             5.0,
@@ -56,13 +56,13 @@ class ContactsWidget extends StatelessWidget {
                 Expanded(
                   child: GestureDetector(
                     onTap: () async {
-                      FlutterPhoneDirectCaller.callNumber(PHONE_NUMBER);
+                      FlutterPhoneDirectCaller.callNumber(Messages.PHONE_NUMBER);
                     },
                     child: Container(
                       alignment: Alignment.center,
                       height: 50,
                       decoration: const BoxDecoration(
-                        color: GREEN,
+                        color: AppColors.GREEN,
                         borderRadius: BorderRadius.only(
                           bottomRight: Radius.circular(
                             5.0,

@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         showLoader: true,
         navigator: const RootTab(),
         durationInSeconds: 3,
-        loaderColor: RED,
+        loaderColor: AppColors.RED,
       ),
     );
   }

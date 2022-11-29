@@ -52,7 +52,7 @@ class MyDataWidget extends StatelessWidget {
             width: 2,
           ),
           borderRadius: BorderRadius.circular(
-            RARIUS,
+            Sizes.RARIUS,
           ),
         ),
         child: Row(
@@ -73,10 +73,10 @@ class MyDataWidget extends StatelessWidget {
                         firstText,
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: MEDIUM_FONT_SIZE,
-                          color: BLUE,
+                          fontSize: Sizes.MEDIUM_FONT_SIZE,
+                          color: AppColors.BLUE,
                           decoration: TextDecoration.underline,
-                          decorationColor: UNDERLINE_BLUE,
+                          decorationColor: AppColors.UNDERLINE_BLUE,
                           decorationThickness: 10,
                         ),
                       )
@@ -84,14 +84,14 @@ class MyDataWidget extends StatelessWidget {
                         firstText,
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: MEDIUM_FONT_SIZE,
+                          fontSize: Sizes.MEDIUM_FONT_SIZE,
                         ),
                       ),
                 middleText.isEmpty
                     ? Text(
                         lastText,
                         style: const TextStyle(
-                          fontSize: MEDIUM_FONT_SIZE,
+                          fontSize: Sizes.MEDIUM_FONT_SIZE,
                         ),
                       )
                     : Row(
@@ -100,17 +100,17 @@ class MyDataWidget extends StatelessWidget {
                             middleText,
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: MEDIUM_FONT_SIZE,
-                              color: GREEN,
+                              fontSize: Sizes.MEDIUM_FONT_SIZE,
+                              color: AppColors.GREEN,
                               decoration: TextDecoration.underline,
-                              decorationColor: UNDERLINE_GREEN,
+                              decorationColor: AppColors.UNDERLINE_GREEN,
                               decorationThickness: 10,
                             ),
                           ),
                           Text(
                             lastText,
                             style: const TextStyle(
-                              fontSize: MEDIUM_FONT_SIZE,
+                              fontSize: Sizes.MEDIUM_FONT_SIZE,
                             ),
                           )
                         ],
@@ -132,12 +132,12 @@ class MyDataWidget extends StatelessWidget {
                         Text(
                           '수정',
                           style: TextStyle(
-                            color: GRAY,
+                            color: AppColors.GRAY,
                           ),
                         ),
                         Icon(
                           Icons.keyboard_arrow_right,
-                          color: GRAY,
+                          color: AppColors.GRAY,
                         ),
                       ],
                     ))

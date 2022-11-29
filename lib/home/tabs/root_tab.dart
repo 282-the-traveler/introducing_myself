@@ -41,11 +41,10 @@ class _RootTabState extends State<RootTab> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-
     // 바텀네비게이션바
     return DefaultLayout(
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: RED,
+        selectedItemColor: AppColors.RED,
         type: BottomNavigationBarType.fixed,
         onTap: (int index) {
           controller.animateTo(index);
@@ -55,40 +54,40 @@ class _RootTabState extends State<RootTab> with SingleTickerProviderStateMixin {
           BottomNavigationBarItem(
             icon: index == 0
                 ? SvgPicture.asset(
-                    home_red,
+                    Images.home_red,
                   )
                 : SvgPicture.asset(
-                    home,
+                    Images.home,
                   ),
             label: '홈',
           ),
           BottomNavigationBarItem(
             icon: index == 1
                 ? SvgPicture.asset(
-                    github_red,
+                    Images.github_red,
                   )
                 : SvgPicture.asset(
-                    github,
+                    Images.github,
                   ),
             label: '깃허브',
           ),
           BottomNavigationBarItem(
             icon: index == 2
                 ? SvgPicture.asset(
-                    motivation_red,
+                    Images.motivation_red,
                   )
                 : SvgPicture.asset(
-                    motivation,
+                    Images.motivation,
                   ),
             label: '지원동기',
           ),
           BottomNavigationBarItem(
             icon: index == 3
                 ? SvgPicture.asset(
-                    profile_red,
+                    Images.profile_red,
                   )
                 : SvgPicture.asset(
-                    profile,
+                    Images.profile,
                   ),
             label: '경력기술서',
           )
